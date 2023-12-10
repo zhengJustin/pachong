@@ -17,6 +17,7 @@ floor_price = soup.select_one('.flex-col.items-center .flex div span').text
 
 # 打印最低价格
 PUSH_TOKEN = os.environ.get("PUSHPLUS_KEY")
+YZY = os.environ.get("YZY")
 url1 = 'http://www.pushplus.plus/send'
 title = "鳄鱼的价格："
 if float(floor_price) <0.007 or float(floor_price)>0.02:
@@ -24,7 +25,7 @@ if float(floor_price) <0.007 or float(floor_price)>0.02:
                                'title': title,
                               'content': floor_price})
     logging.info(f'通知推送结果：{r.status_code, r.text}')
-if float(floor_price) <0.007 or float(floor_price)>0.02:
+if float(floor_price) <0.007 or float(floor_price)>0.0001:
     r = requests.get(url1, params={'token': YZY,
                                'title': title,
                               'content': floor_price})
