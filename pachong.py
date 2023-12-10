@@ -26,7 +26,7 @@ if float(floor_price) <0.007 or float(floor_price)>0.02:
                               'content': floor_price})
     logging.info(f'通知推送结果：{r.status_code, r.text}')
 if float(floor_price) <0.007 or float(floor_price)>0.0001:
-    r = requests.get(url1, params={'token': YZY,
+    t = requests.get(url1, params={'token': YZY,
                                'title': title,
                               'content': floor_price})
-    logging.info(f'通知推送结果：{r.status_code, r.text}')
+    logging.info(f'通知推送结果：{t.status_code, t.text}')
