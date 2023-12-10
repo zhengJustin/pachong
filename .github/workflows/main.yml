@@ -46,7 +46,7 @@ jobs:
       - name: start run
         env:
           PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
-          
+          YZY: ${{ secrets.YZY }}
         run: |
           python pachong.py
 
