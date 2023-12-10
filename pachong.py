@@ -19,7 +19,8 @@ floor_price = soup.select_one('.flex-col.items-center .flex div span').text
 PUSH_TOKEN = os.environ.get("PUSHPLUS_KEY")
 url1 = 'http://www.pushplus.plus/send'
 title = "鳄鱼的价格："
-r = requests.get(url1, params={'token': PUSH_TOKEN,
+if float(floor_price) <0.007 or float(floor_price)>0.02:
+    r = requests.get(url1, params={'token': PUSH_TOKEN,
                                'title': title,
                               'content': floor_price})
-logging.info(f'通知推送结果：{r.status_code, r.text}')
+    logging.info(f'通知推送结果：{r.status_code, r.text}')
