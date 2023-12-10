@@ -1,0 +1,1 @@
+{"_id":"web3","startUrl":["https://www.satsx.io/marketplace/atomicals/dmint/containers/toothy/listed?sort_by=price&page=1"],"selectors":[{"id":"floor price","multiple":false,"parentSelectors":["_root"],"regex":"","selector":".flex-col.items-center .flex div span","type":"SelectorText"}]}
