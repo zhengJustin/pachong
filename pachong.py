@@ -13,7 +13,7 @@ response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
 # 获取最低价格
-floor_price = soup.select_one('.flex-col.items-center .flex div span').text
+floor_price = soup.select_one('div.items-center:nth-of-type(3) .flex .flex span').text
 
 # 打印最低价格
 PUSH_TOKEN = os.environ.get("PUSHPLUS_KEY")
