@@ -20,12 +20,12 @@ PUSH_TOKEN = os.environ.get("PUSHPLUS_KEY")
 YZY = os.environ.get("YZY")
 url1 = 'http://www.pushplus.plus/send'
 title = "鳄鱼的价格："
-if float(floor_price) <0.007 or float(floor_price)>0.02:
+if float(floor_price) <0.007 or float(floor_price)>0.03:
     r = requests.get(url1, params={'token': PUSH_TOKEN,
                                'title': title,
                               'content': floor_price})
     logging.info(f'通知推送结果：{r.status_code, r.text}')
-if float(floor_price) <0.007 or float(floor_price)>0.02:
+if float(floor_price) <0.007 or float(floor_price)>0.03:
     t = requests.get(url1, params={'token': YZY,
                                'title': title,
                               'content': floor_price})
